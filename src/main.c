@@ -135,6 +135,11 @@ main (int argc, char **argv)
           }
           link_href[href_pos++] = '\0';
 
+          /* get an article_id */
+          char article_id[ARTICLE_ID_MAX_LEN];
+          strcpy (article_id, make_article_id (link_href));
+          printf ("$article_id %s\n", article_id);
+
           /* get the tags */
           fgets (md_line, LINE_MAX_LEN, md_file);
 

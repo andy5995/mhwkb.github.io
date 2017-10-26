@@ -55,4 +55,7 @@ void create_tag_html_files (const int tag_ctr, const char *output_dir,
   char tags[][TAG_MAX_LEN],
   const char *link_href, const char *link_title);
 
+char*
+make_article_id(const char *link_href);
+
 #endif

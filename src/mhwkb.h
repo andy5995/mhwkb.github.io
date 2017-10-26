@@ -70,6 +70,8 @@
 /* line length when reading the md file */
 #define LINE_MAX_LEN 512
 
+#define ARTICLE_ID_MAX_LEN 256
+
 /* pagination not yet implemented */
 struct p
 {

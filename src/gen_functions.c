@@ -326,3 +326,39 @@ void create_tag_html_files (const int tag_ctr, const char *output_dir,
 
   return;
 }
+
+char* make_article_id(const char *link_href)
+{
+  char article_id[ARTICLE_ID_MAX_LEN];
+
+  strcpy (article_id, link_href);
+
+  char *ap;
+  ap = &article_id[0];
+
+  while (*ap++ != '\0')
+  {
+    /* switch case probably not necessary here, but will make
+     * it easier to add any other cases in the future
+     */
+    switch (*ap)
+    {
+      case '/' :
+        *ap = '0';
+        break;
+      case ':' :
+        *ap = '0';
+        break;
+      case '.' :
+        *ap = '0';
+        break;
+      case '?' :
+        *ap = '0';
+        break;
+      case '=' :
+        *ap = '0';
+    }
+  }
+  char *tmp = article_id;
+  return tmp;
+}
