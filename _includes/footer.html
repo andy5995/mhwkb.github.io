@@ -1,0 +1,34 @@
+<footer class="site-footer">
+
+    <div class="container">
+        <div class="text-center">
+            <a class="btn btn-danger"  href="{{ site.url }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Back Home</a>
+            <a class="btn btn-danger" href="https://github.com/mhwkb/mhwkb.github.io#mhwkb"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+            <a class="btn btn-danger" href="https://github.com/mhwkb/mhwkb.github.io/commits/master.atom"><i class="fa fa-rss"></i> RSS</a>
+            <br /><br/>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Add to the Knowledge Base</h3>
+        <ul>
+            <li><a href="https://github.com/mhwkb/mhwkb.github.io/issues/new?title=Link%20suggestion%20-">Suggest a link</a></li>
+            <li><a href="https://github.com/mhwkb/mhwkb.github.io/issues/11">Patch the Knowledge Base through GitHub</a></li>
+            <li><a href="https://drive.google.com/open?id=1pXgH6xgNmisJO5WEYI5VidLCh719dDgQo7yb3UlnW5c">Report a problem with a link</a></li>
+        </ul>
+    </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <!-- jQuery local fallback -->
+  <script>window.jQuery || document.write('<script src="/assest/js/jquery.min.js"><\/script>')</script>
+
+  <!-- Bootstrap local fallback -->
+  <div id="bootstrapCssTest" class="hidden"></div>
+  <script>
+    $(function() {
+      if ($('#bootstrapCssTest').is(':visible')) {
+        $("head").prepend('<link rel="stylesheet" href="{{ site.url }}/assets/css/bootstrap.min.css">');
+      }
+    });
+  </script>
+</footer>

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% include category_display.html %}
+<div class="container">
+    <div class="text-center">
+
+        {% for post in paginator.posts %}
+            {% include post_display.html %}
+        {% endfor %}
+        <!-- {% for post in site.categories[page.category] %}
+            {% include post_display.html %}
+        {% endfor %} -->
+
+        {% if paginator.total_pages > 1 %}
+        <ul class="pager">
+            {% if paginator.previous_page %}
+            <li class="previous">
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+            </li>
+            {% endif %}
+            {% if paginator.next_page %}
+            <li class="next">
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+      {% endif %}
+
+    </div>
+</div>

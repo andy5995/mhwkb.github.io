@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<h2 align="center">post tags: {{ page.tag }}</h2>
+<div class="container">
+    <div class="text-center">
+        {% for post in site.tags[page.tag] %}
+            {% include post_display.html %}
+        {% endfor %}
+    </div>
+</div>
